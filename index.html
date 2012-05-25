@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="./css/jb2-blue.css" />
+<script type="text/javascript" src="./scripts/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="./scripts/j2box.js"></script>
+<script type="text/javascript" src="./scripts/cufon-yui.js"></script>
+<script type="text/javascript">
+jumpBox = {
+	collapseTime : 1200,	//Time in ms to collapse page
+	expandTime : 1200,	//Time in ms to expand page
+	slideTime : 2200,	//Time in ms of slide animation between two pages
+	firstPage : 0,	//Index number of first page
+	twitterUsername : "shibulijack",
+	numberOfTweets : 1,	//Number of Recent Tweets
+	showTwUname : true,	//Show link with username before every tweet
+	cufonFont : "MR",	// "CF" - ChunkFive, "MR" - Myriad Pro
+	cufonReplace : "h2.page-heading, h3.inner-heading, h2.content-heading, .small-heading, .menu-link a, .module-title, .footer-link,.item-descr,.item-title,.cufoned,"	// CSS selectors of elements which will be replaced with canvased font
+}
+</script>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="./css/ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="./css/ie6.css" />
+<script type="text/javascript">
+	isIE6 = true;
+</script>
+<![endif]-->
+<title>Shibu Lijack</title>
+<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="ajax-loader"></div>
+<ul id="menu">
+	<li class="menu-link">
+        <a href="./index_8d8c929f.php.html"><img src="./images/menu/about.png" width="72" height="72" alt="About" />About Me</a>
+    </li>
+    <li class="menu-link">
+        <a href="./index_3c4d933b.php.html"><img src="./images/menu/resume.png" width="80" height="81" alt="Resume" />Resume</a>
+    </li>
+    <li class="menu-link">
+       <a href="./index_9ce203b0.php.html"><img src="./images/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
+    </li>
+    <li class="menu-link" style="margin:0px">
+        <a href="./index_cffaa421.php.html"><img src="./images/menu/contacts.png" width="73" height="74" alt="Contacts" />Contacts</a>
+    </li>
+</ul>
+<div class="pages">
+  <!--  Home Page -->
+  <div class="page" id="about" style="display:block;">
+    <div class="cj-title">shibu.me()</div>
+    <div class="content">
+      <div class="content-bg">
+        <h2 class="content-heading">&lt;about&gt;</h2>
+<div style="float:left;width:460px;margin-right:30px;">
+  <p>Hello! I am Shibu Lijack, a 20 years young freelancer, currently pursuing engineering in the field of Computer Science. I just love computers and am a total technofreak!</p> 
+  <p>I love contributing to <b>Open Source Software</b>. I am one of the top Indian contributors of <a href="http://phpbb.com">phpBB</a> <i>(something which I can brag about!)</i> I have developed quite a few <a href="http://wordpress.com">Wordpress plugins</a> as well.</p>
+   <p>Apart from that, I have a passion for <b>web designing</b>, needless to say I love HTML5, PHP and CSS3.</p>
+	<p>Besides computing, I love listening to music(die-hard Linkin Park fan)! Like any other normal Homo sapien, I am a Facebook addict.</p>
+	<h2 class="content-foot">&lt;/about&gt;</h2>
+</div>
+<div style="float:left;width:190px;">
+  <h3 class="small-heading">Quick Links</h3>
+  <p><a href="area51.phpbb.com/contributors/" target="_blank">phpBB Contributors</a></p>
+  <p><a href="http://profiles.wordpress.org/shibulijack/" target="_blank">Wordpress Profile</a></p>
+  <h3 class="small-heading">Jump to page:</h3>
+  <p><a class="button slide to(resume)" href="#">Resume Page</a></p>
+  <p><a class="button slide to(portfolio)" href="#">Portfolio Page</a></p>
+  <p><a class="button slide to(contacts)" href="#">Contact Form</a></p>
+</div>
+<div class="clear"></div>
+      </div>
+    </div>
+    <div class="bottom-content">
+      <div class="bottom-mods">
+  <div class="bottom-mods2">
+    <div class="bottom-mods3">
+      <div class="module first">
+        <h3 class="module-title">Contact</h3>
+        <p>CEG Hostels,<br />
+          Anna University,<br />
+          Chennai-600 025.</p>
+        <p><strong>Email:</strong>shibulijack@gmail.com</p>
+        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Latest Project</h3>
+        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
+        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Recent Tweet</h3>
+        <ul class="tweets"></ul>
+        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
+      </div>
+      <div class="module last">
+        <h3 class="module-title">me.Social</h3>
+        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
+        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+<div class="footer-menu">
+  <div class="footer-link first">
+    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
+  </div>
+  <div class="footer-link last">
+    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
+  </div>  
+</div>
+<p style="text-align:center;">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
+</div>    </div>
+    <div class="clear"></div>
+  </div>
+  <!--  Resume Page -->
+  <div class="page" id="resume" style="display:none;">
+    <div class="cj-title">shibu.bio()</div>
+    <div class="content">
+      <div class="content-bg">
+        
+    <div style="float:left; width:320px;margin-right:38px;">
+      <h2 class="content-heading">&lt;personal&gt;</h2>
+      <ul class="details">
+        <li class="first"><span>Name:</span> Shibu Lijack<i>@CyberJack</i></li>
+        <li><span>Day of Birth:</span> 15th August, 1991</li>
+        <li><span>Nationality:</span> Indian</li>
+        <li class="d-address"><span>Adress:</span> <span class="d-address2">CEG Hostels, Anna University, Chennai-600025.</span></li>
+        <li class="last"><span>Email:</span> shibulijack@gmail.com</li>
+      </ul>
+      <h2 class="content-foot">&lt;/personal&gt;</h2>
+    </div>
+    <div style="float:left; width:320px">
+      <h2 class="content-heading">&lt;technical&gt;</h2>
+      <h3 class="small-heading">HTML & CSS</h3>
+      <p class="stars">
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star2"></span>
+        <span class="star2"></span>
+      </p>
+      <h3 class="small-heading">PHP</h3>
+      <p class="stars">
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star2"></span>
+        <span class="star2"></span>
+        <span class="star2"></span>
+        <span class="star2"></span>
+      </p>
+      <h3 class="small-heading">Photoshop</h3>
+      <p class="stars">
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star1"></span>
+        <span class="star2"></span>
+        <span class="star2"></span>
+      </p>
+      <h2 class="content-foot">&lt;/technical&gt;</h2>
+    </div>
+    <div class="clear"></div>
+  
+  <p style="text-align:center"><a class="button" href="#">Download Complete Resume</a></p>
+
+
+      </div>
+    </div>
+    <div class="bottom-content">
+      <div class="bottom-mods">
+  <div class="bottom-mods2">
+    <div class="bottom-mods3">
+      <div class="module first">
+        <h3 class="module-title">Contact</h3>
+        <p>CEG Hostels,<br />
+          Anna University,<br />
+          Chennai-600 025.</p>
+        <p><strong>Email:</strong>shibulijack@gmail.com</p>
+        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Latest Project</h3>
+        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
+        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Recent Tweet</h3>
+        <ul class="tweets"></ul>
+        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
+      </div>
+      <div class="module last">
+        <h3 class="module-title">me.Social</h3>
+        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
+        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+<div class="footer-menu">
+  <div class="footer-link first">
+    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
+  </div>
+  <div class="footer-link last">
+    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
+  </div>  
+</div>
+<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
+</div>    </div>
+    <div class="clear"></div>
+  </div>
+  <!--  Folio Page -->
+  <div class="page" id="portfolio" style="display:none;">
+    <div class="cj-title">shibu.portfolio()</div>
+    <div class="content">
+      <div class="folio-content">
+    <div class="folio-item first">
+      <h3 class="item-title">TechPassion</h3>
+      <a href="http://techpassiontech.com">
+        <img src="./images/folio/techpassion.png" alt=" " />
+      </a>
+      <div class="item-description">
+        <p>I designed a website for a company, <strong>TechPassion</strong> as a part of summer internship</p>
+      </div>
+    </div>
+    <div class="folio-item last">
+      <h3 class="item-title">Prodigy</h3>
+      <a href="http://prodigy.ceglug.org">
+        <img src="./images/folio/prodigy.png" alt=" " />
+      </a>
+      <div class="item-description">
+        <p>Prodigy is a state level technical event conducted for the school students by Anna University College of Engineering Guindy ACM Student Chapter.</p>
+      </div>
+    </div>
+    <div class="folio-item first">
+      <h3 class="item-title">aBaCUS</h3>
+      <a href="#">
+        <img src="./images/folio/abacus12.png" title="offline"/>
+      </a>
+      <div class="item-description">
+        <p>Site offline</p>
+      </div>
+    </div>
+    <div class="folio-item last">
+      <h3 class="item-title">TEDxCEG</h3>
+      <a href="http://tedxceg.com">
+        <img src="./images/folio/tedxceg.png" alt="TEDxCEG" />
+      </a>
+      <div class="item-description">
+        <p>College of Engineering, Guindy (CEG) is extremely proud to present TEDx- the extended miniature version of the TED,  designed to motivate the young talented minds by providing a platform to mingle with ingenious people that supports novel ideas in new immaculate areas.</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+</div>    </div>
+    <div class="bottom-content">
+      <div class="footer">
+<div class="footer-menu">
+  <div class="footer-link first">
+    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
+  </div>
+  <div class="footer-link last">
+    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
+  </div>  
+</div>
+<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
+</div>    </div>
+    <div class="clear"></div>
+  </div>
+  <!--  Contacts Page -->
+  <div class="page" id="contacts" style="display:none;">
+    <div class="cj-title">shibu.contact()</div>
+    <div class="content">
+      <div class="content-bg">
+        <h2 class="content-heading">&lt;contact&gt;</h2>
+<div class="status_message"> </div>
+<form action="#" method="post" id="contact_form" />
+  <p>
+    <label>Your Name:<br />
+      <input type="text" size="40" name="name" id="contact_name" />
+    </label>
+  </p>
+  <p>
+    <label>E-mail*:<br />
+      <input type="text" size="40" name="email" id="contact_email" onkeyup="validateEmail()" />
+    </label>
+  </p>
+  <p>
+    <label>Subject:<br />
+      <input style="color:#777" type="text" size="40" id="contact_subject" readonly="readonly" value="" name="subject" />
+    </label>
+  </p>
+  <p>
+    <label>Message*:<br />
+      <textarea cols="40" rows="7" name="message" id="contact_message" onkeyup="validateMessage()"></textarea>
+    </label>
+  </p>
+  <input class="button" type="submit" name="submit" value="Send Message" />
+</form>
+
+<div>
+ <h2 class="content-foot">&lt;/contact&gt;</h2>
+  
+</div>
+      </div>
+    </div>
+    <div class="bottom-content">
+      <div class="bottom-content">
+      <div class="bottom-mods">
+  <div class="bottom-mods2">
+    <div class="bottom-mods3">
+      <div class="module first">
+        <h3 class="module-title">Contact</h3>
+        <p>CEG Hostels,<br />
+          Anna University,<br />
+          Chennai-600 025.</p>
+        <p><strong>Email:</strong>shibulijack@gmail.com</p>
+        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Latest Project</h3>
+        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
+        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
+      </div>
+      <div class="module">
+        <h3 class="module-title">Recent Tweet</h3>
+        <ul class="tweets"></ul>
+        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
+      </div>
+      <div class="module last">
+        <h3 class="module-title">me.Social</h3>
+        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
+        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+<div class="footer-menu">
+  <div class="footer-link first">
+    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
+  </div>
+  <div class="footer-link">
+    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
+  </div>
+  <div class="footer-link last">
+    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
+  </div>  
+</div>
+<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
+</div>    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="folioDescr">
+  <div class="folioDescrContent"></div>
+  <div class="descr-arrow"></div>
+</div>
+<div class="dark-layer"></div>
+<div id="popupBox"> </div>
+<div id="popup"> 
+	<a href="./index.php.html" onclick="closePopup()" class="close"> 
+  		<img height="32" width="32" alt="close" src="./images/close.png" class="p-close" />
+  	</a>
+	<div class="pop-window">
+    </div>
+</div>
+<div id="jBox"></div>
+</body>
+</html>
