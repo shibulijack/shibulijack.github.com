@@ -8,7 +8,7 @@ a {
 }
 
 body {
-	background: #dbdbdb url(./img/bg.jpg) repeat center 0 fixed;
+	background: #888 url(./img/bg.png) repeat center 0 fixed !important;
 }
 
 
@@ -160,6 +160,7 @@ input, textarea {
 /* @group header */
 
 #header {
+	z-index: 9999;
 	text-align: right;
 	height: 170px;
 	background: url(./img/graphic.png) repeat-x 0 0px;
@@ -190,7 +191,40 @@ input, textarea {
 	color: #CCC !important;
 }
 
+#color_strap {
+	width: auto;
+	height: 10px;
+	animation:kolor 30s linear infinite;
+	-moz-animation:kolor 30s linear infinite; /* Firefox */
+	-webkit-animation:kolor 30s linear infinite; /* Safari and Chrome */
+}
 
+@keyframes kolor
+{
+0%   	{background:#97080E;}
+25% 	{background:#DA4B0F;}
+50% 	{background:#488C13;}
+70% 	{background:#1B55C0;}
+100%	{background:#97080E;}	
+}
+
+@-moz-keyframes kolor /* Firefox */
+{
+0%   	{background:#97080E;}
+25% 	{background:#DA4B0F;}
+50% 	{background:#488C13;}
+70% 	{background:#1B55C0;}
+100%	{background:#97080E;}
+}
+
+@-webkit-keyframes kolor /* Safari and Chrome */
+{
+0%   	{background:#97080E;}
+25% 	{background:#DA4B0F;}
+50% 	{background:#488C13;}
+70% 	{background:#1B55C0;}
+100%	{background:#97080E;}
+}
 
 /* @end */
 
