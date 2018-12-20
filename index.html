@@ -1,408 +1,563 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="./css/jb2-blue.css" />
-<script type="text/javascript" src="./scripts/jquery-1.5.1.min.js"></script>
-<script type="text/javascript" src="./scripts/j2box.js"></script>
-<script type="text/javascript" src="./scripts/cufon-yui.js"></script>
-<script type="text/javascript">
-jumpBox = {
-	collapseTime : 1200,	//Time in ms to collapse page
-	expandTime : 1200,	//Time in ms to expand page
-	slideTime : 2200,	//Time in ms of slide animation between two pages
-	firstPage : 0,	//Index number of first page
-	twitterUsername : "shibulijack",
-	numberOfTweets : 1,	//Number of Recent Tweets
-	showTwUname : true,	//Show link with username before every tweet
-	cufonFont : "MR",	// "CF" - ChunkFive, "MR" - Myriad Pro
-	cufonReplace : "h2.page-heading, h3.inner-heading, h2.content-heading, .small-heading, .menu-link a, .module-title, .footer-link,.item-descr,.item-title,.cufoned,"	// CSS selectors of elements which will be replaced with canvased font
-}
-</script>
-<!--[if IE 7]>
-<link rel="stylesheet" type="text/css" href="./css/ie7.css" />
-<![endif]-->
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" href="./css/ie6.css" />
-<script type="text/javascript">
-	isIE6 = true;
-</script>
-<![endif]-->
-<title>Shibu Lijack</title>
-<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div class="ajax-loader"></div>
-<ul id="menu">
-	<li class="menu-link">
-        <a href="./index_8d8c929f.php.html"><img src="./images/menu/about.png" width="72" height="72" alt="About" />About Me</a>
-    </li>
-    <li class="menu-link">
-        <a href="./index_3c4d933b.php.html"><img src="./images/menu/resume.png" width="80" height="81" alt="Resume" />Resume</a>
-    </li>
-    <li class="menu-link">
-       <a href="./index_9ce203b0.php.html"><img src="./images/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
-    </li>
-    <li class="menu-link" style="margin:0px">
-        <a href="./index_cffaa421.php.html"><img src="./images/menu/contacts.png" width="73" height="74" alt="Contacts" />Contacts</a>
-    </li>
-</ul>
-<div class="pages">
-  <!--  Home Page -->
-  <div class="page" id="about" style="display:block;">
-    <div class="cj-title">shibu.me()</div>
-    <div class="content">
-      <div class="content-bg">
-        <h2 class="content-heading">&lt;about&gt;</h2>
-<div style="float:left;width:460px;margin-right:30px;">
-  <p>Hello! I am Shibu Lijack, a 20 years young freelancer, currently pursuing engineering in the field of Computer Science. I just love computers and am a total technofreak!</p> 
-  <p>I love contributing to <b>Open Source Software</b>. I am one of the top Indian contributors of <a href="http://phpbb.com">phpBB</a> <i>(something which I can brag about!)</i> I have developed quite a few <a href="http://wordpress.com">Wordpress plugins</a> as well.</p>
-   <p>Apart from that, I have a passion for <b>web designing</b>, needless to say I love HTML5, PHP and CSS3.</p>
-	<p>Besides computing, I love listening to music(die-hard Linkin Park fan)! Like any other normal Homo sapien, I am a Facebook addict.</p>
-	<h2 class="content-foot">&lt;/about&gt;</h2>
-</div>
-<div style="float:left;width:190px;">
-  <h3 class="small-heading">Quick Links</h3>
-  <p><a href="area51.phpbb.com/contributors/" target="_blank">phpBB Contributors</a></p>
-  <p><a href="http://profiles.wordpress.org/shibulijack/" target="_blank">Wordpress Profile</a></p>
-  <p><a href="http://shibulijack.wordpress.com" target="_blank">My Blog</a></p>
-  <h3 class="small-heading">Jump to page:</h3>
-  <p><a class="button slide to(resume)" href="#">Resume Page</a></p>
-  <p><a class="button slide to(portfolio)" href="#">Portfolio Page</a></p>
-  <p><a class="button slide to(contacts)" href="#">Contact Form</a></p>
-</div>
-<div class="clear"></div>
-      </div>
-    </div>
-    <div class="bottom-content">
-      <div class="bottom-mods">
-  <div class="bottom-mods2">
-    <div class="bottom-mods3">
-      <div class="module first">
-        <h3 class="module-title">Contact</h3>
-        <p>CEG Hostels,<br />
-          Anna University,<br />
-          Chennai-600 025.</p>
-        <p><strong>Email:</strong>shibulijack@gmail.com</p>
-        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
-      </div>
-      <div class="module">
-        <h3 class="module-title">Latest Project</h3>
-        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
-        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
-      </div>
-      <div class="module">
-        <h3 class="module-title">Recent Tweet</h3>
-        <ul class="tweets"></ul>
-        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
-      </div>
-      <div class="module last">
-        <h3 class="module-title">me.Social</h3>
-        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
-        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
-        </p>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-</div>
-      <div class="footer">
-<div class="footer-menu">
-  <div class="footer-link first">
-    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
-  </div>
-  <div class="footer-link last">
-    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
-  </div>  
-</div>
-<p style="text-align:center;">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
-</div>    </div>
-    <div class="clear"></div>
-  </div>
-  <!--  Resume Page -->
-  <div class="page" id="resume" style="display:none;">
-    <div class="cj-title">shibu.bio()</div>
-    <div class="content">
-      <div class="content-bg">
-        
-    <div style="float:left; width:320px;margin-right:38px;">
-      <h2 class="content-heading">&lt;personal&gt;</h2>
-      <ul class="details">
-        <li class="first"><span>Name:</span> Shibu Lijack<i>@CyberJack</i></li>
-        <li><span>Day of Birth:</span> 15th August, 1991</li>
-        <li><span>Nationality:</span> Indian</li>
-        <li class="d-address"><span>Adress:</span> <span class="d-address2">CEG Hostels, Anna University, Chennai-600025.</span></li>
-        <li class="last"><span>Email:</span> shibulijack@gmail.com</li>
-      </ul>
-      <h2 class="content-foot">&lt;/personal&gt;</h2>
-    </div>
-    <div style="float:left; width:320px">
-      <h2 class="content-heading">&lt;technical&gt;</h2>
-      <h3 class="small-heading">HTML & CSS</h3>
-      <p class="stars">
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star2"></span>
-        <span class="star2"></span>
-      </p>
-      <h3 class="small-heading">PHP</h3>
-      <p class="stars">
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star2"></span>
-        <span class="star2"></span>
-        <span class="star2"></span>
-        <span class="star2"></span>
-      </p>
-      <h3 class="small-heading">Photoshop</h3>
-      <p class="stars">
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star1"></span>
-        <span class="star2"></span>
-        <span class="star2"></span>
-      </p>
-      <h2 class="content-foot">&lt;/technical&gt;</h2>
-    </div>
-    <div class="clear"></div>
-  
-  <p style="text-align:center"><a class="button" href="shibu_resume.pdf">Download Complete Resume</a></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Shibu Lijack | Frontend Web Developer</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!--     Fonts and icons     -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/brands.css"
+      integrity="sha384-whKHCkwP9f4MyD1vda26+XRyEg2zkyZezur14Kxc784RxUU1E7HvWVYj9EoJnUV7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css"
+      integrity="sha384-WK8BzK0mpgOdhCxq86nInFqSWLzR5UAsNg0MGX9aDaIIrFWQ38dGdhwnNCAoXFxL"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Files -->
+    <link href="./assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+  </head>
 
+  <body class="profile-page sidebar-collapse">
+    <nav
+      class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg"
+      color-on-scroll="100"
+      id="sectionsNav"
+    >
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="https://shibulijack.github.io/">
+            Shibu Lijack
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="dropdown nav-item">
+              <a
+                href="#"
+                class="dropdown-toggle nav-link"
+                data-toggle="dropdown"
+              >
+                <i class="material-icons">apps</i> Links
+              </a>
+              <div class="dropdown-menu dropdown-with-icons">
+                <a href="https://www.theticketresale.com" class="dropdown-item">
+                  <i class="material-icons">launch</i> TheTicketResale
+                </a>
+                <a
+                  href="https://cseditor-85556.firebaseapp.com/"
+                  class="dropdown-item"
+                >
+                  <i class="material-icons">launch</i> CS Editor
+                </a>
+                <a
+                  href="https://shibulijack.github.io/strello/"
+                  class="dropdown-item"
+                >
+                  <i class="material-icons">launch</i> Strello
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://shibulijack.wordpress.com">
+                <i class="material-icons">create</i> Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                rel="tooltip"
+                title=""
+                data-placement="bottom"
+                href="https://twitter.com/shibulijack"
+                target="_blank"
+                data-original-title="Follow me on Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                rel="tooltip"
+                title=""
+                data-placement="bottom"
+                href="https://www.linkedin.com/in/shibulijack/"
+                target="_blank"
+                data-original-title="Find me on Facebook"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                rel="tooltip"
+                title=""
+                data-placement="bottom"
+                href="https://www.github.com/shibulijack"
+                target="_blank"
+                data-original-title="Follow me on Github"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="page-header header-filter"
+      data-parallax="true"
+      style="background-image: url('./assets/img/bg-code.jpg');"
+    ></div>
+    <div class="main main-raised">
+      <div class="profile-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+              <div class="profile">
+                <div class="avatar">
+                  <img
+                    src="./assets/img/shibu.jpg"
+                    alt="Circle Image"
+                    class="img-raised rounded-circle img-fluid"
+                  />
+                </div>
+                <div class="name">
+                  <h3 class="title">.about()</h3>
+                  <h6>&lt;Frontend Web Developer/&gt;</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description text-center pb-4">
+            <p>
+              I'm a web developer. I spend my whole day, practically every day,
+              experimenting with HTML, CSS, and JavaScript; dabbling with
+              Angular, Ember.js & React; and inhaling a wide variety of
+              potentially useless information through a few hundred RSS feeds. I
+              build websites & web applications that are simple & elegant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="secondary mt-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="card card-nav-tabs">
+              <div class="card-header card-header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active show"
+                          href="#experience"
+                          data-toggle="tab"
+                        >
+                          <i class="material-icons">work</i> .experience()
+                          <div class="ripple-container"></div
+                        ></a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link "
+                          href="#education"
+                          data-toggle="tab"
+                        >
+                          <i class="material-icons">school</i> .education()
+                          <div class="ripple-container"></div
+                        ></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-toggle="tab">
+                          <i class="material-icons">whatshot</i> .skills()
+                          <div class="ripple-container"></div
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body ">
+                <div class="tab-content">
+                  <div class="tab-pane active show" id="experience">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">
+                          Senior Software Engineer - Frontend
+                        </h4>
+                        <p>Freshworks Inc.</p>
+                        <p class="text-muted">May 2015 - Present</p>
+                        <b>Achievements:</b>
+                        <ul>
+                          <li>
+                            Architected "Proactive support" feature in Freshdesk
+                            Ember app.
+                          </li>
+                          <li>
+                            Developed a responsive Wordpress theme for the
+                            official blog sites.
+                          </li>
+                          <li>
+                            Optimized the Web performance by implementing the
+                            best practices as suggested by Google’s PageSpeed
+                            Insights.
+                          </li>
+                          <li>
+                            Revamped the language websites by developing a
+                            framework using a static site generator integrated
+                            with translation management tool.
+                          </li>
+                          <li>
+                            Automated the development & deployment using Travis
+                            CI and Grunt tasks.
+                          </li>
+                        </ul>
+                        <p>
+                          <b>Awards: </b>“Most Valuable Player 2016” & “Emerging
+                          Star 2017”
+                        </p>
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">
+                          Associate Software Analyst - Fullstack
+                        </h4>
+                        <p>Bally Technologies Pvt Ltd.</p>
+                        <p class="text-muted">Oct 2013 - Apr 2015</p>
+                        <b>Achievements:</b>
+                        <ul>
+                          <li>
+                            Developed several UI components for a web
+                            application called Sitecontroller.
+                          </li>
+                          <li>
+                            Implemented the core Jackpot module (both UI and
+                            backend) within a very short duration.
+                          </li>
+                        </ul>
+                        <p><b>Awards: </b>“Star of the Month | August’14”</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="education">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">
+                          College of Engineering, Guindy
+                        </h4>
+                        <p>Bachelor's Degree, Computer Science</p>
+                        <p class="text-muted">2009-2013</p>
+                        <b>Achievements:</b>
+                        <ul>
+                          <li>K!13 Web Core Leader</li>
+                          <li>Abacus Web Core</li>
+                          <li>CSAU member</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">
+                          Sri Jeyandra Golden Jubilee School, Tirunelveli
+                        </h4>
+                        <p>Schooling</p>
+                        <p class="text-muted">1997-2009</p>
+                        <div>
+                          <b>Achievements:</b>
+                          <ul>
+                            <li>School Pupil Leader</li>
+                            <li>
+                              National Science drama - Best actor of South India
+                            </li>
+                            <li>National Science seminar - Runner</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="tab-pane" id="skills">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">&lt;Languages /&gt;</h4>
+                        <ul>
+                          <li>HTML</li>
+                          <li>JavaScript</li>
+                          <li>CSS</li>
+                          <li>PHP</li>
+                          <li>Java</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="title mb-1">&lt;Frameworks /&gt;</h4>
+                        <ul>
+                          <li>Angular 2+</li>
+                          <li>Ember.js</li>
+                          <li>React JS</li>
+                          <li>jQuery</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="bottom-content">
-      <div class="bottom-mods">
-  <div class="bottom-mods2">
-    <div class="bottom-mods3">
-      <div class="module first">
-        <h3 class="module-title">Contact</h3>
-        <p>CEG Hostels,<br />
-          Anna University,<br />
-          Chennai-600 025.</p>
-        <p><strong>Email:</strong>shibulijack@gmail.com</p>
-        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
+    <div class="projects mt-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-login">
+              <div class="card-header text-center card-header-rose">
+                <h4 class="card-title">FOSS</h4>
+                <div class="social-line">
+                  <a
+                    href="https://reactjs.org"
+                    class="btn btn-just-icon btn-link"
+                  >
+                    <i class="fab fa-js"></i>
+                  </a>
+                  <a
+                    href="http://php.net/manual/en/intro-whatis.php"
+                    class="btn btn-just-icon btn-link"
+                  >
+                    <i class="fab fa-php"></i>
+                  </a>
+                  <a
+                    href="https://wordpress.org"
+                    class="btn btn-just-icon btn-link"
+                  >
+                    <i class="fab fa-wordpress"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body pl-4 pb-4">
+                <div class="item">
+                  <h5 class="title mb-1">Strello</h5>
+                  <p>
+                    Simple Trello like Task organizer built using Vanilla JS.
+                  </p>
+                  <p>
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://shibulijack.github.io/strello/"
+                      ><i class="material-icons"> open_in_new </i> OPEN</a
+                    >
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://github.com/shibulijack/strello/"
+                      ><i class="material-icons"> code </i> SOURCE</a
+                    >
+                  </p>
+                </div>
+                <div class="item">
+                  <h5 class="title mb-1">FLAMES</h5>
+                  <p>It's a fun game involving the names of two people.</p>
+                  <p>
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="http://theflames.herokuapp.com/"
+                      ><i class="material-icons"> open_in_new </i> OPEN</a
+                    >
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://github.com/shibulijack/flames/"
+                      ><i class="material-icons"> code </i> SOURCE</a
+                    >
+                  </p>
+                </div>
+                <div class="item">
+                  <h5 class="title mb-1">WordPress</h5>
+                  <p>
+                    Developed a few WP plugins to enhance user experience.
+                    Designed and developed Bootstrap based phpBB theme - proBoot
+                  </p>
+                  <p>
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://profiles.wordpress.org/shibulijack#content-plugins"
+                      ><i class="material-icons"> extension </i> WP Plugins</a
+                    >
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="http://shibulijack.github.io/proBoot/"
+                      ><i class="material-icons"> featured_play_list </i> WP
+                      Theme</a
+                    >
+                  </p>
+                </div>
+                <div class="item">
+                  <h5 class="title mb-1">npm Packages</h5>
+                  <p>
+                    Developed a few npm packages - Ember.js addon, Grunt plugin
+                    and jQuery plugin.
+                  </p>
+                  <p>
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://www.npmjs.com/settings/shibulijack/packages"
+                      ><i class="material-icons"> extension </i> npm Packages</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-login">
+              <div class="card-header card-header-danger text-center">
+                <h4 class="card-title">Angular</h4>
+                <div class="social-line">
+                  <a
+                    href="https://angular.io"
+                    class="btn btn-just-icon btn-link"
+                  >
+                    <i class="fab fa-angular"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body pl-4 pb-4">
+                <div class="item">
+                  <h5 class="title mb-1">TheTicketResale</h5>
+                  <p>
+                    India's No. 1 regulated ticket resale platform built using
+                    Angular 5. Spread across 22 states in the country,
+                    TheTicketResale is the safest way to buy and sell extra
+                    tickets.
+                  </p>
+                  <p>
+                    <a href="https://www.theticketresale.com"
+                      >www.theticketresale.com</a
+                    >
+                  </p>
+                </div>
+                <div class="item">
+                  <h5 class="title mb-1">AtoZStream</h5>
+                  <p>
+                    Video streaming platform which scraps the internet for free
+                    movie links and enables online streaming.
+                  </p>
+                  <p>
+                    <a href="https://www.atozstream.com">www.atozstream.com</a>
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="footer text-center">
+                  <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg"
+                    >More</a
+                  >
+                </div> -->
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-login">
+              <div class="card-header card-header-info text-center">
+                <h4 class="card-title">React</h4>
+                <div class="social-line">
+                  <a
+                    href="https://reactjs.org"
+                    class="btn btn-just-icon btn-link"
+                  >
+                    <i class="fab fa-react"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body pl-4 pb-4">
+                <div class="item">
+                  <h5 class="title mb-1">CS Editor</h5>
+                  <p>Clean & Simple JS editor which leverages Firebase.</p>
+                  <p>
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://cseditor-85556.firebaseapp.com/"
+                      ><i class="material-icons"> open_in_new </i> OPEN</a
+                    >
+                    <a
+                      class="btn btn-primary btn-link btn-sm"
+                      href="https://github.com/shibulijack/cs-editor/"
+                      ><i class="material-icons"> code </i> SOURCE</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="footer text-center">
+                    <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg"
+                      >More</a
+                    >
+                  </div> -->
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="module">
-        <h3 class="module-title">Latest Project</h3>
-        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
-        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
-      </div>
-      <div class="module">
-        <h3 class="module-title">Recent Tweet</h3>
-        <ul class="tweets"></ul>
-        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
-      </div>
-      <div class="module last">
-        <h3 class="module-title">me.Social</h3>
-        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
-        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
-        </p>
-      </div>
-      <div class="clear"></div>
     </div>
-  </div>
-</div>
-      <div class="footer">
-<div class="footer-menu">
-  <div class="footer-link first">
-    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
-  </div>
-  <div class="footer-link last">
-    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
-  </div>  
-</div>
-<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
-</div>    </div>
-    <div class="clear"></div>
-  </div>
-  <!--  Folio Page -->
-  <div class="page" id="portfolio" style="display:none;">
-    <div class="cj-title">shibu.portfolio()</div>
-    <div class="content">
-      <div class="folio-content">
-    <div class="folio-item first">
-      <h3 class="item-title">TechPassion</h3>
-      <a href="http://techpassiontech.com">
-        <img src="./images/folio/techpassion.png" alt=" " />
-      </a>
-      <div class="item-description">
-        <p>I designed a website for a company, <strong>TechPassion</strong> as a part of summer internship</p>
+    <footer class="footer footer-default">
+      <div class="container">
+        <nav class="float-left">
+          <ul>
+            <li><a href="https://www.creative-tim.com"> Creative Tim </a></li>
+            <li>
+              <a href="https://creative-tim.com/presentation"> About Us </a>
+            </li>
+            <li><a href="http://blog.creative-tim.com"> Blog </a></li>
+            <li>
+              <a href="https://www.creative-tim.com/license"> Licenses </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright float-right">Last updated on December, 2018.</div>
       </div>
-    </div>
-    <div class="folio-item last">
-      <h3 class="item-title">Prodigy</h3>
-      <a href="http://prodigy.ceglug.org">
-        <img src="./images/folio/prodigy.png" alt=" " />
-      </a>
-      <div class="item-description">
-        <p>Prodigy is a state level technical event conducted for the school students by Anna University College of Engineering Guindy ACM Student Chapter.</p>
-      </div>
-    </div>
-    <div class="folio-item first">
-      <h3 class="item-title">aBaCUS</h3>
-      <a href="#">
-        <img src="./images/folio/abacus12.png" title="offline"/>
-      </a>
-      <div class="item-description">
-        <p>Site offline</p>
-      </div>
-    </div>
-    <div class="folio-item last">
-      <h3 class="item-title">TEDxCEG</h3>
-      <a href="http://tedxceg.com">
-        <img src="./images/folio/tedxceg.png" alt="TEDxCEG" />
-      </a>
-      <div class="item-description">
-        <p>College of Engineering, Guindy (CEG) is extremely proud to present TEDx- the extended miniature version of the TED,  designed to motivate the young talented minds by providing a platform to mingle with ingenious people that supports novel ideas in new immaculate areas.</p>
-      </div>
-    </div>
-    <div class="clear"></div>
-</div>    </div>
-    <div class="bottom-content">
-      <div class="footer">
-<div class="footer-menu">
-  <div class="footer-link first">
-    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
-  </div>
-  <div class="footer-link last">
-    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
-  </div>  
-</div>
-<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
-</div>    </div>
-    <div class="clear"></div>
-  </div>
-  <!--  Contacts Page -->
-  <div class="page" id="contacts" style="display:none;">
-    <div class="cj-title">shibu.contact()</div>
-    <div class="content">
-      <div class="content-bg">
-        <h2 class="content-heading">&lt;contact&gt;</h2>
-<div class="status_message"> </div>
-<form action="#" method="post" id="contact_form" />
-  <p>
-    <label>Your Name:<br />
-      <input type="text" size="40" name="name" id="contact_name" />
-    </label>
-  </p>
-  <p>
-    <label>E-mail*:<br />
-      <input type="text" size="40" name="email" id="contact_email" onkeyup="validateEmail()" />
-    </label>
-  </p>
-  <p>
-    <label>Subject:<br />
-      <input style="color:#777" type="text" size="40" id="contact_subject" readonly="readonly" value="" name="subject" />
-    </label>
-  </p>
-  <p>
-    <label>Message*:<br />
-      <textarea cols="40" rows="7" name="message" id="contact_message" onkeyup="validateMessage()"></textarea>
-    </label>
-  </p>
-  <input class="button" type="submit" name="submit" value="Send Message" />
-</form>
-
-<div>
- <h2 class="content-foot">&lt;/contact&gt;</h2>
-  
-</div>
-      </div>
-    </div>
-    <div class="bottom-content">
-      <div class="bottom-content">
-      <div class="bottom-mods">
-  <div class="bottom-mods2">
-    <div class="bottom-mods3">
-      <div class="module first">
-        <h3 class="module-title">Contact</h3>
-        <p>CEG Hostels,<br />
-          Anna University,<br />
-          Chennai-600 025.</p>
-        <p><strong>Email:</strong>shibulijack@gmail.com</p>
-        <p><a class="cufoned slide to(contacts)" href="./index_cffaa421.php.html">Send Message</a></p>
-      </div>
-      <div class="module">
-        <h3 class="module-title">Latest Project</h3>
-        <p><a href="http://test.kurukshetra.org.in"><img src="./images/folio/logo.png" width="100" title="Kurukshetra" alt="Kurukshetra" /></a></p>
-        <p style="text-align:center"><a class="cufoned slide to(portfolio)" href="./index_cffaa421.php.html">Full Portfolio</a></p>
-      </div>
-      <div class="module">
-        <h3 class="module-title">Recent Tweet</h3>
-        <ul class="tweets"></ul>
-        <p><a target="_blank" class="cufoned tweet-link" href="http://twitter.com/">Follow me on Twitter</a></p>
-      </div>
-      <div class="module last">
-        <h3 class="module-title">me.Social</h3>
-        <p><a href="http://twitter.com/shibulijack"><img src="./images/social/twitter.png" width="40" height="40" alt="twitter" /></a>
-        <a href="http://facebook.com/shibu.lijack"><img src="./images/social/facebook.png" width="40" height="40" alt="facebook" /></a>
-        </p>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-</div>
-      <div class="footer">
-<div class="footer-menu">
-  <div class="footer-link first">
-    <a class="slide to(about)" href="./index_64884805.php.html">About</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(resume)" href="./index_a7934cad.php.html">Resume</a>
-  </div>
-  <div class="footer-link">
-    <a class="slide to(portfolio)" href="./index_81ac248e.php.html">Portfolio</a>
-  </div>
-  <div class="footer-link last">
-    <a class="slide to(contacts)" href="./index_5d52d9bf.php.html">Contacts</a>
-  </div>  
-</div>
-<p style="text-align:center">Designed by iDangero.us. Customized by CJ. Hosted by GitHub.</p>
-</div>    </div>
-    <div class="clear"></div>
-  </div>
-</div>
-<div class="folioDescr">
-  <div class="folioDescrContent"></div>
-  <div class="descr-arrow"></div>
-</div>
-<div class="dark-layer"></div>
-<div id="popupBox"> </div>
-<div id="popup"> 
-	<a href="./index.php.html" onclick="closePopup()" class="close"> 
-  		<img height="32" width="32" alt="close" src="./images/close.png" class="p-close" />
-  	</a>
-	<div class="pop-window">
-    </div>
-</div>
-<div id="jBox"></div>
-</body>
+    </footer>
+    <!--   Core JS Files   -->
+    <script
+      src="./assets/js/core/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./assets/js/core/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./assets/js/core/bootstrap-material-design.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./assets/js/material-kit.js?v=2.0.5"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
